@@ -28,7 +28,7 @@ mother(X) :-
 brother(X, Y) :-
     dite(X, Z),
     dite(Y, Z),
-    man(Y).
+    man(X).
 
 brothers(X) :-
     dite(X, Z),
@@ -50,3 +50,28 @@ b_s(X) :-
     not(X = Y),
     write(Y),
     nl.
+
+son(X, Y) :-
+    dite(X, Y),
+    man(X).
+
+son(X) :-
+    dite(Y, X),
+    man(Y),
+    write(Y),
+    nl.
+
+sister(X, Y) :-
+    dite(X, Z),
+    dite(Y, Z),
+    woman(X).
+
+sisters(X) :-
+    dite(X, Z),
+    dite(Y, Z),
+    man(Z),
+    woman(Y),
+    not(X = Y),
+    write(Y),
+    nl.
+
