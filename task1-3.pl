@@ -75,3 +75,40 @@ sisters(X) :-
     write(Y),
     nl.
 
+grand_ma(X, Y) :-
+    dite(Z, X),
+    dite(Y, Z),
+    woman(X).
+
+grand_mas(X) :-
+    dite(X, Y),
+    dite(Y, Z),
+    woman(Z),
+    write(Z),
+    nl.
+
+grnd_p_s(X, Y) :-
+    dite(Z, X),
+    dite(Y, Z),
+    man(X),
+    man(Y).
+
+grnd_s_p(X, Y) :-
+    dite(Z, Y),
+    dite(X, Z),
+    man(X),
+    man(Y).
+
+grand_pa_and_son(X, Y)
+    grnd_p_s(X, Y);
+    grnd_s_p(X, Y).
+
+uncle(X, Y) :-
+    dite(X, Z),
+    brother(Y, Z).
+
+uncles(X) :-
+    dite(X, Y),
+    brother(Z, Y),
+    write(Z),
+    nl.
