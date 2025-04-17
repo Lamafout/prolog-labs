@@ -42,7 +42,6 @@ userfriendly(fedora, 1).
 userfriendly(chromeos, 2).
 userfriendly(debian, 1).
 
-
 shit(android, 0).
 shit(ios, 1).
 shit(fuchsia, 1).
@@ -124,12 +123,12 @@ question7(X) :-
     read(X).
 
 pr :-	question1(X1),question2(X2),question3(X3),question4(X4),
-        question5(X5), question6(X5), question7(X7),
-        desktop(X, X1), 
-        mobile(X, X2), 
-        games(X, X3), 
-        userfriendly(X, X4), 
-        shit(X, X5), 
-        server(X6), 
-        unstable(X7),
+        question5(X5), question6(X6), question7(X7),
+        desktop(X, X1),
+        mobile(X, X2),
+        games(X, X3),
+        userfriendly(X, X4),
+        shit(X, X5),
+        server(X, X6),
+        unstable(X, X7),
 		write(X).
